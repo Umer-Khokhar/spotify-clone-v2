@@ -1,0 +1,10 @@
+{
+    "title": "English Songs",
+    "description": "Listen to some of the best english songs",
+    "img": "cover.jpeg",
+    "songs" : [
+        {"song": "song1.mp3", "title": "Dispacito full song", "author": "Luis Fonsi"},
+        {"song": "song2.mp3", "title": "Borken Angles full song", "author": "Luis Fonsi"},
+        {"song": "song3.mp3", "title": "Loving you is a loosing game", "author": "justin timberlake"}
+    ]
+}
