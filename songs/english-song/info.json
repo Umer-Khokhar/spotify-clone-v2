@@ -5,6 +5,13 @@
     "songs" : [
         {"song": "song1.mp3", "title": "Dispacito full song", "author": "Luis Fonsi"},
         {"song": "song2.mp3", "title": "Borken Angles full song", "author": "Luis Fonsi"},
-        {"song": "song3.mp3", "title": "Loving you is a loosing game", "author": "justin timberlake"}
+        {"song": "song3.mp3", "title": "Loving you is a loosing game", "author": "justin timberlake"},
+        {"song": "song4.mp3", "title": "Lovely - Official", "author" : "billie Eilish"},
+        {"song": "song5.mp3", "title": "Dusk Till Dawn", "author" : "Zayn"},
+        {"song": "song6.mp3", "title": "Runaway - Official", "author" : "Aurora"},
+        {"song": "song7.mp3", "title": "Dernière Danse - Official", "author" : "Indila"},
+        {"song": "song8.mp3", "title": "Ego - Official", "author" : "Willy William"},
+        {"song": "song9.mp3", "title": "Shape of You", "author" : "Ed Sheeran"},
+        {"song": "song10.mp3", "title": "See You Again", "author" : "Wiz Khalifa"}
     ]
 }

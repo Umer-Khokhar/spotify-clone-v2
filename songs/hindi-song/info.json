@@ -3,8 +3,16 @@
     "description": "Listen to some of the best Hindi songs",
     "img": "cover.jpeg",
     "songs" : [
-        {"song": "song1.mp3", "title": "Song 1"},
-        {"song": "song2.mp3", "title": "Song 2"},
-        {"song": "song3.mp3", "title": "Song 3"}
+        {"song": "song1.mp3", "title": "Kaifi Khalil - Kahani Suno", "author" : "Kaifi Khalil"},
+        {"song": "song2.mp3", "title": "Phir Bhi Tumko Chaahunga", "author" : "Arijit Singh"},
+        {"song": "song3.mp3", "title": "Gallyian teri gallyian", "author" : "Ankit Tiwari"},
+        {"song": "song4.mp3", "title": "Banjara - Ek Villian", "author" : "Ankit Tiwari"},
+        {"song": "song5.mp3", "title": "Aye Khuda - Murder 2", "author" : "KSHITIJ TAREY"},
+        {"song": "song6.mp3", "title": "Ye Jism hai to kya", "author" : "Ali Bagga"},
+        {"song": "song7.mp3", "title": "Bond Bond - Hate Story VI", "author" : "Jubin Nautiyal"},
+        {"song": "song8.mp3", "title": "Tum mery Ho - Hate Story VI", "author" : "Jubin Nautiyal"},
+        {"song": "song9.mp3", "title": "Wajah Tum Ho", "author" : "Armaan"},
+        {"song": "song10.mp3", "title": "Dil Ma Chupa lo ga", "author" : "Armaan"}
+        
     ]
 }
