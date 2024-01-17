@@ -5,10 +5,7 @@ import * as myfetch from './js/fetch.js'
     hamburger.show.addEventListener('click', hamburger.closeNav);
     
 
-    myfetch.loadData('hindi-song')
-    myfetch.loadData('english-song')
-
-    console.log(myfetch.cardContainer)
-
+    myfetch.loadData('hindi-song');
+    myfetch.loadData('english-song');
     
       

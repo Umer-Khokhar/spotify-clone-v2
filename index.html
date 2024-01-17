@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/43ea707be2.js" crossorigin="anonymous"></script>
   </head>
   <body class="bg-black">
     <main class="main">
@@ -87,6 +88,27 @@
           </div>
         </nav>
         <div class="cardContainer" id="cardContainer"></div>
+        <section class="seekbar">
+          <div class="icons">
+              <i class="fa-solid fa-backward-step" id="previous"></i>
+              <i class="fa-solid fa-pause play-btn" id="play-btn"></i>
+              <i class="fa-solid fa-forward-step" id="next"></i>
+              <div class="times">
+                <span id="val">0:00</span>
+                <span>/</span>
+                <span id="val2">0:00</span>
+              </div>
+          </div>
+          <div class="info">
+            <div class="names">
+                <h3>Please play the songs from the hamburger</h3>
+                <p></p>
+            </div>
+            <div class="seek">
+                <input type="range" min="0" max="100" value="0" id="range" class="range-input" /> 
+            </div>
+          </div>
+        </section>
       </section>
     </main>
     <script src="main.js" defer type="module"></script>

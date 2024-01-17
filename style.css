@@ -213,8 +213,9 @@ body {
     background-color: var(--cardContainer-bg-right);
     margin-right:.5rem;
     border-radius: var(--border-rounded);
-    overflow: scroll;
+    /* overflow: scroll; */
     flex-grow: 1;
+    position: relative;
 }
 
 /* styling navbar inside of right */
@@ -328,6 +329,116 @@ body {
 }
 
 
+
+/* seekBar */
+
+.seekbar {
+    position: absolute;
+    left: 1%;
+    bottom: 1%;
+    right: 1%;
+    padding: 1rem 1.2rem;
+    background-color: rgb(45, 45, 68);
+    display: none;
+    gap: 4rem;
+    color: white;
+    align-items: center;
+}
+
+.seekbar.show {
+    display: flex;
+}
+
+.seekbar .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .85rem;
+}
+
+.icons .times {
+    margin-left: .8rem;
+    font-size: 13px;
+}
+
+.seekbar .icons i {
+    /* margin: 0 .1rem; */
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.seekbar .icons .play-btn {
+    margin-left: .5rem;
+    margin-right: .4rem;
+}
+
+.seekbar .names h3 {
+    font-weight: 500;
+}
+
+.seekbar .info {
+    flex: 1;
+}
+
+.seek {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* max-width: 450px; */
+}
+
+.range-input {
+    -webkit-appearance: none;
+    appearance: none; 
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    height: 3px;
+    background: #8d8d8d;
+    transition: all .2s linear;
+  }
+  
+  .range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none; 
+    height: 0px;
+    width: 0px;
+    /* background-color: rgb(0, 183, 255); */
+    border-radius: 50%;
+    border: none;
+    transition: all .2s linear;
+  }
+  
+  .range-input::-moz-range-thumb {
+    display: none;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 0px;
+    width: 0px;
+    /* background-color: rgb(0, 183, 255); */
+    border-radius: 50%;
+    border: none;
+    transition: all .2s linear;
+  }
+
+.range-input:hover::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(0, 183, 255);
+}
+.range-input:hover::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(0, 183, 255);
+}
+
+
+
+
 /* media query starts here (1024) */
 
 @media screen and (max-width: 1024px) {
@@ -408,6 +519,14 @@ body {
         align-items: center;
         justify-content: center;
     }
+    .seekbar {
+        position: fixed;
+        gap: 0;
+        bottom: 1%;
+    }
+    .seekbar .info {
+        margin-left: 2rem;
+    }
 }
 
 @media screen and (max-width: 695px) {
@@ -432,6 +551,9 @@ body {
         min-width: 200px;
         height: 100%;
         min-height: 100%;
+    }
+    .seekbar .info {
+        font-size: 3vw;
     }
 }
 
