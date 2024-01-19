@@ -19,6 +19,7 @@
     --cardContainer-bg-right : #ffffff10;
     --card-border: 6px;
     --rounded: 3px;
+    --disp : none;
 }
 
 
@@ -340,7 +341,7 @@ body {
     padding: 1rem 1.2rem;
     background-color: rgb(45, 45, 68);
     display: none;
-    gap: 4rem;
+    gap: 2rem;
     color: white;
     align-items: center;
 }
@@ -350,7 +351,7 @@ body {
 }
 
 .seekbar .icons {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     gap: .85rem;
@@ -378,7 +379,29 @@ body {
 }
 
 .seekbar .info {
-    flex: 1;
+    /* flex: 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info .names {
+    width: 100%;
+    overflow: hidden;
+    margin-left: 0;
+}
+
+.volumeCtrl {
+    display: none;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 2rem;
+}
+
+.range-vol {
+    position: relative;
+    width: 90px;
+    height: 4px;
 }
 
 .seek {
@@ -527,6 +550,9 @@ body {
     .seekbar .info {
         margin-left: 2rem;
     }
+    .names p {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 695px) {
@@ -555,8 +581,56 @@ body {
     .seekbar .info {
         font-size: 3vw;
     }
+    .seekbar .info {
+        margin-left: .3rem;
+    }
+    .seekbar .icons {
+        gap: 0.40rem;
+    }
+    .seekbar .icons i {
+        font-size: 18px;
+    }
+    .volumeCtrl {
+        margin-left: .5rem;
+        gap: .50rem;
+    }
+    .range-vol {
+        width: 45px;
+        height: 2.2px;
+    }
+    .range-vol::-webkit-slider-thumb {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+    }
+    .range-vol::-moz-range-thumb {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+    }
+    .times {
+        min-width: 60px;
+        font-size: 10px;
+    }
+
+    .seekbar .info .names {
+       /* height: 10px; */
+       font-size: 10px;
+       max-width: 140px;
+       /* width: 140px; */
+       min-width: 60px;
+    }
 }
 
+/* displaying some of the things none */
+
+.volumeCtrl.show {
+    display: flex;
+}
+
+.icons.show {
+   display: flex;
+}
 .play {
     display: none;
 }

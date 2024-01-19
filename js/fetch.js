@@ -10,7 +10,31 @@ const nextBtn = document.getElementById("next");
 const previousBtn = document.getElementById("previous");
 const currentTimeVal = document.getElementById("val");
 const currentTimeVal2 = document.getElementById("val2");
-// console.log(cardContainer)
+const volumeCtrlCon = document.querySelector('.volumeCtrl');
+const volumeCtrlSpan = document.querySelector('.volumeCtrl i');
+const volumeRange = document.getElementById('volRange');
+const controls = document.querySelector('.icons')
+
+
+function showAll() {
+  controls.classList.add("show");
+  volumeCtrlCon.classList.add("show");
+}
+
+
+playAudio.volume = 1.0
+volumeRange.value = 100
+volumeCtrlSpan.addEventListener('click', e => {
+   if (!playAudio.muted) {
+    playAudio.muted = true;
+    volumeCtrlSpan.classList.add('fa-volume-xmark')
+    volumeCtrlSpan.classList.remove('fa-volume-high')
+  } else {
+    playAudio.muted = false;
+     volumeCtrlSpan.classList.remove('fa-volume-xmark')
+     volumeCtrlSpan.classList.add('fa-volume-high')
+   }
+   })
 
 function loadData(folder) {
   fetch(`songs/${folder}/info.json`)
@@ -46,6 +70,7 @@ function cardFetch(mydata, folder) {
       `;
       let currentIndex = index;
       li.addEventListener("click", (e) => {
+        showAll()
         progressBar.classList.add('show')
         let audioUrl = `/songs/${folder}/${mydata.songs[currentIndex].song}`;
         playAudio.src = audioUrl;
@@ -130,7 +155,25 @@ function cardFetch(mydata, folder) {
     }
     progressBar.classList.add('show')
   });
+
+  volumeRange.addEventListener('input', e => {
+    if(playAudio.muted) {
+      playAudio.muted = false
+    }
+
+    playAudio.volume = e.target.value / 100
+    volumeCtrlSpan.classList.remove('fa-volume-xmark')
+    volumeCtrlSpan.classList.add('fa-volume-high')
+
+    if (volumeRange.value == 0) {
+      playAudio.muted = true
+      volumeCtrlSpan.classList.remove('fa-volume-high')
+      volumeCtrlSpan.classList.add('fa-volume-xmark')
+    }
+  })
   
 }
+
+
 
 export { loadData, cardFetch };
