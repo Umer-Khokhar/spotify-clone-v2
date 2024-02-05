@@ -4,6 +4,8 @@ Welcome to the brief overview of our Spotify Clone! 🎵
 
 I are have build a Spotify clone which enhance my JavaScript logic and add a plethora of functionalities to this web application. With this clone, I try to create an immersive music streaming experience that rivals the original Spotify platform.
 
+Live demo : https://spotifysclones.netlify.app
+
 ## Features:
 
 As a beginner and intermediate JavaScript developer, you can add various features to a Spotify-like application. Here are some examples:
